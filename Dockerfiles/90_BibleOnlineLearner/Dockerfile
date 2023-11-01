@@ -113,8 +113,13 @@ RUN echo "GRANT ALL PRIVILEGES ON ${MYSQL_BOL_DATABASE_NAME}.* TO '${MYSQL_BOL_U
     --host=localhost \
     --no-auto-rehash 
     
-    
 
+#
+# Run the setup_configs.sh script. This sets up the files:
+# - myapp/config/database.php
+# - myapp/config/ol.php 
+#
+RUN setup_configs.sh 
 
 
 
