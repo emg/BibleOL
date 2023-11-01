@@ -1,4 +1,4 @@
-SUBDIRS = 01_Build_Emdros
+SUBDIRS = 01_Build_Emdros 02_MySQL 90_BibleOnlineLearner
 
 all: environment_variables.txt
 	for d in $(SUBDIRS); do make -C $$d all ; done
