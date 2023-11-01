@@ -2,8 +2,11 @@ CLEANFILES = *~
 
 
 
-all: 
+all:  pull build run
 
+
+pull:
+	podman pull mysql/mysql-server:latest
 
 build: 
 
