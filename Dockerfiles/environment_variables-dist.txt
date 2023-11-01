@@ -1,4 +1,22 @@
 MYSQL_ROOT_PASSWORD="CHANGEME"
-MYSQL_BOL_USER_USERNAME="bol"
-MYSQL_BOL_USER_PASSWORD="changeme"
-MYSQL_BOL_DATABASE="bol_db"
+MYSQL_USER="bol"
+MYSQL_PASSWORD="changeme"
+MYSQL_DATABASE="bol_db"
+
+MAIL_SENDER_ADDRESS="ulrikp@scripturesys.com"
+MAIL_SENDER_NAME="Bible Online Learner"
+
+GOOGLE_LOGIN_ENABLED="false"
+GOOGLE_APPS_ID=''
+GOOGLE_CLIENT_SECRET=''
+
+FACEBOOK_LOGIN_ENABLED="false"
+FACEBOOK_CLIENT_ID=""
+FACEBOOK_CLIENT_SECRET=""
+
+# The base URL of the site
+BASE_URL="http://localhost/"
+
+# If you are not using https, you should set COOKIE_SECURE to "false"
+COOKIE_SECURE="false"
+#COOKIE_SECURE="true"
