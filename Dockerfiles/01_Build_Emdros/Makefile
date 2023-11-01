@@ -2,8 +2,7 @@ CLEANFILES = *~
 
 
 
-all:
-
+all: build run
 
 build:
 	podman build -t bible_online_learner .
