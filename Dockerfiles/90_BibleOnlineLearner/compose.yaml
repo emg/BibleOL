@@ -1,0 +1,31 @@
+services:
+  bibleol:
+    build: .
+      secrets:
+        - bol_secrets
+    ports:
+      - "80:80"
+
+  mysql:
+    image: mysql:8.0
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD_FILE=./.env
+      - MYSQL_DATABASE_FILE=./.env
+      - MYSQL_USER_FILE=./.env
+      - MYSQL_PASSWORD_FILE=./.env
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysqldb:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  mysqldb:
+
+secrets:
+  bol_secrets:
+    file:./.env
+
